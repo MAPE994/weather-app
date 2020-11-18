@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/shared/user.service';
+import { TimePlace } from '../../../interface'
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-content-header',
@@ -6,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class ContentHeaderComponent implements OnInit {
+  constructor(private userService: UserService) {}
+  timePlace: TimePlace
 
-  constructor() { }
+  ngOnInit() {
+    this.getTimePlaceData();
+  }
 
-  ngOnInit() {}
+  getTimePlaceData () {
+    this.userService.getCurrentWeather().subscribe(data => this.timePlace = {
+      dt: moment.unix(data.dt).format("MMMM Do YYYY"),
+      location: data.name
+  })
+}
 
 }

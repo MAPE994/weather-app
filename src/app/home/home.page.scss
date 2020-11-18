@@ -1,0 +1,19 @@
+.content-container {
+    margin: 16px;
+    min-width: 320px;
+    min-height: 480px;
+    height: 100%;
+    border: 1px solid white;
+
+    .header-container {
+        max-width: 320px;
+        margin: 5px auto;
+        border: 1px solid white;
+    }
+    .weather-container {
+        border: 1px solid white;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}

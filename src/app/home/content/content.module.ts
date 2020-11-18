@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ContentHeaderComponent } from './header/header.component'
 import { CurrentWeatherComponent } from './current-weather/current-weather.component'
 import { WeatherForecastComponent } from './weather-forecast/weather-forecast.component'
-
-
+import { UserService } from '../../shared/user.service';
 
 @NgModule({
   imports: [
@@ -13,12 +12,16 @@ import { WeatherForecastComponent } from './weather-forecast/weather-forecast.co
   declarations: [
     ContentHeaderComponent,
     CurrentWeatherComponent,
-    WeatherForecastComponent
+    WeatherForecastComponent,
+
   ],
   exports: [
     ContentHeaderComponent,
     CurrentWeatherComponent,
-    WeatherForecastComponent
-  ]
+    WeatherForecastComponent,
+  ],
+  providers: [
+    UserService
+  ] 
 })
 export class ContentModule { }

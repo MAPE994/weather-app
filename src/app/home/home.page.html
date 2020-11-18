@@ -1,6 +1,12 @@
 <ion-content [fullscreen]="true">
     <app-header></app-header>
-    <app-content-header></app-content-header>
-    <app-current-weather></app-current-weather>
-    <app-weather-forecast></app-weather-forecast>
+    <div class="content-container">
+        <div class="header-container">
+            <app-content-header></app-content-header>
+        </div>
+        <div class="weather-container">
+            <app-current-weather></app-current-weather>
+            <app-weather-forecast></app-weather-forecast>
+        </div>
+    </div>
 </ion-content>

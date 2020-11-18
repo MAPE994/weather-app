@@ -1,3 +1,9 @@
-<p>
-  weather-forecast works!
-</p>
+<ul>
+  <li *ngFor="let dailyForecast of weatherForecast;">
+    <h2>{{dailyForecast.dateTime}}</h2>
+    <p>{{dailyForecast.currentTemperature}}</p>
+    <p>{{dailyForecast.description}}</p>
+    <p>{{dailyForecast.minTemperature}} - {{dailyForecast.maxTemperature}}</p>
+  </li>
+</ul>
+<button (click)="logWeather()"></button>

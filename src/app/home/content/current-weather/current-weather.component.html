@@ -1,3 +1,11 @@
 <p>
-  current-weather works!
+{{weather.currentTemperature}}
 </p>
+<p>
+  {{weather.description}}
+</p>
+<p>
+  {{weather.minTemperature}} - {{weather.maxTemperature}}
+</p>
+      
+<button (click)="logWeather()">test</button>
